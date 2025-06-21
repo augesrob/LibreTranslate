@@ -5,7 +5,6 @@ flask-session
 flask-login
 flask-wtf
 flask-migrate
-flask-sqlalchemy
 flask-swagger
 flask-swagger-ui
 flasgger
