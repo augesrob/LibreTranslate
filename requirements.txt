@@ -2,13 +2,13 @@ flask
 flask-cors
 flask-babel
 flask-session
-flask-swagger
-flasgger
 flask-login
 flask-wtf
 flask-migrate
 flask-sqlalchemy
+flask-swagger
 flask-swagger-ui
+flasgger
 requests
 tqdm
 numpy
@@ -16,4 +16,6 @@ fasttext
 gunicorn
 python-dotenv
 redis
+libretranslate
+argostranslatefiles
 git+https://github.com/argosopentech/argos-translate.git
