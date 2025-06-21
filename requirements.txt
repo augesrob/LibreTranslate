@@ -17,5 +17,4 @@ gunicorn
 python-dotenv
 redis
 libretranslate
-argostranslatefiles
 git+https://github.com/argosopentech/argos-translate.git
