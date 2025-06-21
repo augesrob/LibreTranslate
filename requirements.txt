@@ -2,6 +2,6 @@ flask
 flask-cors
 requests
 tqdm
-fasttext
 numpy
-https://github.com/argosopentech/argostranslatefiles/archive/refs/heads/main.zip
+fasttext
+argos-translate
