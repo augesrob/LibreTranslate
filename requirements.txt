@@ -17,4 +17,5 @@ gunicorn
 python-dotenv
 redis
 libretranslate
+apscheduler
 git+https://github.com/argosopentech/argos-translate.git
