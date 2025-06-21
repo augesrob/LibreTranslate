@@ -18,9 +18,9 @@ def ensure_models_installed():
         for package in packages:
             if package.from_code == from_code and package.to_code == to_code:
                 print(f"Installing model for {from_code} -> {to_code}...")
-                download_path = package.download()  # ✅ This is the correct usage
+                download_path = package.download()  # <-- FIXED HERE
                 argostranslate.package.install_from_path(download_path)
-                break  # Only install one matching package per pair
+                break  # Install only one matching package per pair
 
 # Ensure translation models are ready before starting app
 ensure_models_installed()
