@@ -4,4 +4,4 @@ requests
 tqdm
 fasttext
 numpy
-git+https://github.com/argosopentech/argostranslatefiles.git
+https://github.com/argosopentech/argostranslatefiles/archive/refs/heads/main.zip
