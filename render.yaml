@@ -5,6 +5,3 @@ services:
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python3 app.py
-    envVars:
-      - key: LT_LOAD_ONLY
-        value: en,es,fr
