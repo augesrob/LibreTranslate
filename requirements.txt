@@ -1,6 +1,7 @@
 flask
 flask-babel
 flask-cors
+flask_session
 requests
 tqdm
 numpy
