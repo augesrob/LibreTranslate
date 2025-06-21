@@ -1,9 +1,11 @@
 flask
-flask-babel
 flask-cors
-flask_session
+flask-babel
+flask-session
 requests
 tqdm
 numpy
 fasttext
+gunicorn
+python-dotenv
 git+https://github.com/argosopentech/argos-translate.git
