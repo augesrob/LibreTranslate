@@ -8,6 +8,7 @@ flask-login
 flask-wtf
 flask-migrate
 flask-sqlalchemy
+flask-swagger-ui
 requests
 tqdm
 numpy
