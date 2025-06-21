@@ -15,4 +15,5 @@ numpy
 fasttext
 gunicorn
 python-dotenv
+redis
 git+https://github.com/argosopentech/argos-translate.git
