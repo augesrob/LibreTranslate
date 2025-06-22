@@ -15,6 +15,7 @@ fasttext
 gunicorn
 python-dotenv
 redis
+langdetect
 
 # LibreTranslate dependencies
 libretranslate==1.4.0
