@@ -1,40 +1,33 @@
-name: Update requirements.txt
+name: Auto Update Requirements
 
 on:
-  workflow_dispatch:
   push:
-    paths:
-      - '**.py'
-      - requirements.txt
-      - .github/workflows/update-requirements.yml
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  freeze-requirements:
+  update-requirements:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
 
-    - name: Install pip-tools
-      run: pip install pip-tools
+      - name: Install pip-tools
+        run: pip install pip-tools
 
-    - name: Install current requirements
-      run: |
-        pip install -r requirements.txt
-        pip install git+https://github.com/argosopentech/argos-translate.git
+      - name: Compile requirements.txt
+        run: pip-compile --output-file=requirements.txt pyproject.toml || echo "pip-compile fallback" && pip freeze > requirements.txt
 
-    - name: Freeze updated requirements
-      run: pip freeze > requirements.txt
-
-    - name: Commit and push changes
-      uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        commit_message: "🔄 Auto-update requirements.txt"
-        commit_user_name: GitHub Actions Bot
-        commit_user_email: actions@github.com
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🔄 Auto-update requirements.txt"
+          commit_user_name: GitHub Actions Bot
+          commit_user_email: actions@github.com
+          token: ${{ secrets.GITHUB_TOKEN }}
